@@ -1,0 +1,28 @@
+CREATE DATABASE usersdb; //创建数据库 usersdb
+
+//创建account表
+
+CREATE TABLE `account` (
+`id`  int NOT NULL AUTO_INCREMENT ,
+`username`  varchar(255) NOT NULL ,
+`password`  varchar(255) NOT NULL ,
+`created_time`  datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP ,
+`locked`  tinyint(1) NOT NULL DEFAULT 0 ,
+PRIMARY KEY (`id`)
+)
+;
+
+//创建user_info表 存放用户信息
+
+CREATE TABLE `user_info` (
+`id`  int(11) NOT NULL AUTO_INCREMENT ,
+`fullname`  varchar(255) NOT NULL ,
+`age`  int(11) NOT NULL ,
+`address`  varchar(255) NOT NULL ,
+`account_id`  int(11) NOT NULL ,
+PRIMARY KEY (`id`),
+CONSTRAINT `userinfo_account` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
+)
+;
+
+
