@@ -37,8 +37,7 @@ public class DeleteActionServlet extends HttpServlet{
         String id = request.getParameter("id");
         try{
             Class.forName("org.gjt.mm.mysql.Driver").newInstance();
-            String url =
-                    "jdbc:mysql://localhost/usersdb?user=root&password=123456";
+            String url = "jdbc:mysql://localhost/usersdb?user=root&password=123456";
             Connection conn = DriverManager.getConnection(url);
             //因为设置了关联删除 所以account 中的记录被删除 userInfo表中数据也会被删除
             Statement stmt = conn.createStatement();

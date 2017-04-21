@@ -54,9 +54,9 @@ public class LoginActionServlet extends HttpServlet{
                     String fullname = rs.getString("fullname");
                     session.setAttribute("FULLNAME", fullname);
                     getServletContext().getRequestDispatcher("/UserListActionServlet").forward(request, response);
-                } else {
-                    response.sendRedirect("login_failure.jsp");
                 }
+            }else {
+                response.sendRedirect("login_failure.jsp");
             }
         } catch (Exception e) {
             out.println("未能正常登录");
