@@ -67,7 +67,7 @@ public class UpdatePServlet extends HttpServlet {
             // 转到userlist.jsp以显示用户清单
             request.setAttribute("user", user);
             // 下面不能使用response.sendRedirect("/useredit.jsp")，否则User对象传递就失效了
-            getServletContext() .getRequestDispatcher("/useredit.jsp").forward(request, response);
+            getServletContext() .getRequestDispatcher("/update.jsp").forward(request, response);
         }
         catch(Exception e){
             out.println("<a href=\"javascript: window.history.back()\"> 返回</a>");

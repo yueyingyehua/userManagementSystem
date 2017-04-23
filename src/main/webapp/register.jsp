@@ -53,7 +53,7 @@
     </style>
 </head>
 <body>
-    <form action="RegisterActionServlet" method="POST">
+    <form action="Register.do" method="POST">
         <div class="login_main" style="margin-top: 100px; ">
             <span>用户名：</span><input type="text" name="username"/>
             <br/>

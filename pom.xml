@@ -15,6 +15,15 @@
       <scope>test</scope>
     </dependency>
 
+
+    <!--springMVC-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.3.7.RELEASE</version>
+    </dependency>
+
+
     <!--mysql-->
     <dependency>
       <groupId>mysql</groupId>

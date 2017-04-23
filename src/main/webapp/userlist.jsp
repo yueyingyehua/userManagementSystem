@@ -39,8 +39,8 @@
                 <td>${user.address}</td>
                 <td>${user.createdTime}</td>
                 <td>${user.locked}</td>
-                <td><a href="DeleteActionServlet?id=${user.id }">删除</a></td>
-                <td><a href="UpdatePServlet?id=${user.id }">更新</a></td>
+                <td><a href="Delete.do?id=${user.id }">删除</a></td>
+                <td><a href="UpdateP.do?id=${user.id }">更新</a></td>
             </tr>
         </c:forEach>
     </table>

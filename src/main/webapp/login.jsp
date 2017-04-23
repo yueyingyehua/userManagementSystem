@@ -56,7 +56,7 @@
 <body>
     <a href="register.jsp">新用户注册</a>
     <p />
-    <form action="LoginActionServlet" method="POST">
+    <form action="Login.do" method="POST">
         <div class="login_main">
             <span>用户名：</span><input type="text" name="username" /><br />
             <br />
